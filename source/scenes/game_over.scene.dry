@@ -125,7 +125,7 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 
 @hitler_wins
 view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0)
-title: Адольф Гитлер полностью контролирует Германию.
+title: Адольф Гитлер победил...
 tags: endings
 go-to: eg_menu
 
@@ -135,90 +135,89 @@ go-to: eg_menu
 
 @war_against_hitler
 view-if: (chancellor == "Hitler" or president == "Hitler") and (long_war == 1)
-title: Адольф Гитлер получил власть, но мы бесстрашно боремся против него.
+title: Адольф Гитлер у власти, но мы не сдались.
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler has taken power in Germany. However, we have rallied the democratic forces of the country against him, and are fighting back. The outcome of this war is uncertain.
+Адольф Гитлер захватил власть в Германии, однако мы подняли на бой наши силы и даём отпор. Исход этой гражданской войны неясен.
 
 
 @no_hitler
 view-if: chancellor != "Hitler" and president != "Hitler" and president != "Göring" and chancellor_party != "NSDAP"
-title: Hitler does not yet control Germany...
+title: Гитлер всё ещё не правит Германией...
 tags: endings
 go-to: eg_menu
+Гитлер всё ещё не во власти в Германии. [? if chancellor == "Papen" : И всё же, авторитарно-правые взгляды и полтика канцлера Папена оставляют возможность Гитлеру или ему подобному взять власть в свои руки в будущем. ?] [? if chancellor == "Schleicher" : И всё же, авторитарная политика и мутные схемы канцлера Шлейхера оставляют возможность Гитлеру или ему подобному взять власть в свои руки в будущем. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Учитывая то, что Пруссия находится под контролем недемократичных сил, правые в Германии ещё могут увидеть свой рассвет. ?][? if chancellor == "Brüning" : И всё же, безграмотная политика экономии канцлера Брюнинга и продолжение депрессии оставляют возможность Гитлеру или ему подобному взять власть в свои руки в будущем. ?]
 
-Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chancellor Papen's authoritarianism and far-right politics are paving the way for Hitler, or someone like him, to take power. ?] [? if chancellor == "Schleicher" : However, Chancellor Schleicher's authoritarianism and scheming is paving the way for Hitler, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if chancellor == "Brüning" : However, Chancellor Brüning's austerity policies and the continuation of the depression are paving the way for Hitler, or someone like him, to take power. ?]
-
-[? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he will never return. ?]
+[? if hitler_deported == 1 : Мы депортировали Гитлера обратно в Австрию. Надеемся, что он больше никогда не вернётся. ?]
 
 @nsdap_win
 view-if: chancellor == "Goebbels" or president == "Göring"
-title: Despite the deportation of Hitler, the Nazis have still taken power...
+title: Нацисты победили и без Гитлера!
 tags: endings
 go-to: eg_menu
 
-Despite the deportation of Hitler, the NSDAP has somehow still wormed its way into power. [? if long_war == 1 : We are fighting them for control of Germany. ?]
+Несмотря на депортацию главаря шайки нацистов Гитлера, его прихвостни смогли заполсти во власть и захватить контроль над Германией. [? if long_war == 1 : И несмотря на это, мы сражаемся с ними за нашу страну. ?]
 
 
 @civil_war_won
-title: We have won the civil war.
+title: Мы победили!
 view-if: republic_victory == 1
 tags: endings
 go-to: eg_menu
 
-We have won the civil war against the reactionary forces. Germany will be changed forever, but it is too early to know how.
+Мы победили в гражданской войне против всех наших противников! Германия будет изменена кардинально, но как и насколько - это кщё предстоит узнать.
 
 @civil_war_lost
-title: We lost the civil war.
+title: Мы проиграли.
 view-if: total_defeat == 1
 tags: endings
 go-to: eg_menu
 
-We have lost the civil war. At least it was a quick coup, and ended before Germany could be plunged into total war.
+Мы проиграли это гражданскую войну. По коайней мере, это был быстрый мятеж, который не успел утащить множество жизней в кровавую бойню.
 
 @long_war
-title: Germany is gripped by civil war.
+title: Германия в гражданской войне...
 view-if: long_war == 1
 tags: endings
 go-to: eg_menu
 
-Germany is currently in the grip of a civil war, a brutal affair that has no obvious end. Thousands of lives have already been extinguished, and it is likely that the war will not stop until Germany's cities are reduced to ruins. 
+Германия охвачена гражданской войной без конца. Уже тысячи жизней угасли в ней, а ясного завершения так и не видно. Скорее всего, эта битва не закончится, пока последгий город нашей страны не превратится в руины. 
 
-[? if is_favorable == 0 : The current conditions are not favorable for us. ?][? if west_relation >= 2: Our cause is popular in the West, but their sclerotic governments are reluctant to send us aid. ?][? if soviet_aid >= 1 : The Soviet Union has aided the Communists, but not the socialists and democrats, in an attempt to shape Germany's future government. ?][? if east_aid >= 1 : Poland and Czechoslovakia have sent some assistance against the fascists. ?]
+[? if is_favorable == 0 : Никто из международного сообщества не решился нас поддержать. ?][? if west_relation >= 2: Западные державы видят в нас хорошего товарища, однако их тормознутые правительства со склеротиками во главе подумали, что не стоить отправлять нам помощь. ?][? if soviet_aid >= 1 : Советский союз поддержвл коммунистов, пытаясь подстроить Германию под себя, однако силы, борющиеся за демократичное будущее страны остались без так необходимой помощи. ?][? if east_aid >= 1 : Польша и Чехословакия, не понаслышке знающие о германской агрессии, прислали нам помощь, дабы мы смогли сражаться с фашистами, угрожающими миру у их границ. ?]
 
 
 @braun_victorious
-title: Otto Braun victorious
+title: Отто Браун Ван Лав <3
 view-if: president == "Braun"
 tags: endings
 go-to: eg_menu
 
-Otto Braun has been elected as President of Germany. He had never desired to be the most powerful man in Germany, but now he is.
+Отто Браун был избран президентом. Он никогда не хотел становиться самым влиятельным человеком в Германии, однако теперь он именно такой.
 
 @president_schumacher
-title: Kurt Schumacher victorious
+title: Триумф Курта Шумахера
 view-if: president == "Schumacher"
 tags: endings
 go-to: eg_menu
 
-Kurt Schumacher has been elected as President of Germany. As a young and ambitious SPD member, he will be shaping Germany for years to come.
+Курт Шумахер был избран президентом Германии. Молодой и амбициозный, он будет ковать социал-демократическое будущее страны на годы вперёд.
 
 @president_juchacz
-title: Marie Juchacz is President
+title: Мари Юхач - президент
 view-if: president == "Juchacz"
 tags: endings
 go-to: eg_menu
 
-Marie Juchacz has been elected as President of Germany. She is the first woman to be elected as the head of state of any republic, and will contribute to shaping Germany for years to come.
+Мари Юхач была избрана президентом Германии. Это первый случай женщины - главы любой республики в истории, и это точно повлияет на будущее страны на голы вперёд.
 
 @president_einstein
-title: Albert Einstein is President
+title: Альберт Эйнштейн - президент
 view-if: president == "Einstein"
 tags: endings
 go-to: eg_menu
 
-Albert Einstein, possibly the most famous scientist in the world, has been elected as President of Germany. As a German Jew and a pacifist, he is the repudiation of everything the Nazis stood for, and a symbol of a new German Republic that has moved beyond its checkered past.
+Альберт Эйнштейн, возможно, самый популярный учёный в мире, был избран президентом Германии. Как еврей и пацифист, он является олицетворением всего того, что противно нацистам. С такой фигурой в кресле президента точно можно сказать, что Германия перешагнула своё тёмное прошлое.
 
 
 
