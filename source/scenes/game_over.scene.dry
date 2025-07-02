@@ -1,4 +1,4 @@
-title: Game Over.
+title: Игра окончена.
 new-page: true
 go-to: eg_menu
 on-arrival: {!
@@ -120,22 +120,22 @@ if ((Q.welfare > 0 && Q.judicial_reform >= 2 && Q.womens_work >= 1 && Q.family_l
 @eg_menu
 
 - #endings
-- @end_game: End game.
+- @end_game: Закончить игру.
 
 
 @hitler_wins
 view-if: (chancellor == "Hitler" or president == "Hitler") and (total_defeat==1 or civil_war_seen == 0)
-title: Adolf Hitler is in undisputed control over Germany.
+title: Адольф Гитлер полностью контролирует Германию.
 tags: endings
 go-to: eg_menu
 
-Adolf Hitler is in undisputed control over Germany. The SPD, along with all of the democratic forces, have failed.
+Адольф Гитлер взял Германию под свой полный контроль. Как сама СДПГ, так и другие демократические силы не смогли его остановить.
 
-[? if civil_war_seen == 1 : At the very least, we fought back. Perhaps our resistance will be celebrated in an impossible-to-forsee future. ?]
+[? if civil_war_seen == 1 : По крайней мере, мы храбро сражались за нашу свободу. Может быть, будущие поколения будут нас помнить. ?]
 
 @war_against_hitler
 view-if: (chancellor == "Hitler" or president == "Hitler") and (long_war == 1)
-title: Adolf Hitler is in power, but we are fighting to stop him.
+title: Адольф Гитлер получил власть, но мы бесстрашно боремся против него.
 tags: endings
 go-to: eg_menu
 
