@@ -222,28 +222,28 @@ go-to: eg_menu
 
 
 @spd_victorious
-title: SPD still in government
+title: СДПГ всё ещё в правительстве
 view-if: spd_in_government == 1 and chancellor_party == "SPD" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The SPD is still in government, under Chancellor [+ chancellor +]. Given the circumstances, this is a substantial accomplishment.
+СДПГ всё ещё в правительстве, канцлер - [+ chancellor +]. Учитывая обстоятельства, этим можно гордиться.
 
 @communist_victory
-title: Communist victory
+title: Победа коммунистов
 view-if: chancellor_party == "KPD" or president == "Thälmann" and total_defeat == 0 and long_war == 0
 tags: endings
 go-to: eg_menu
 
-The KPD has won power in Germany, with our assistance. They will try to remake Germany in the Soviet image. How much they succeed is yet to be determined.
+С нашей помощью, КПГ встала у руля в Германии. Очевидно, они попытаются перестроить её по советскому образцу. Получится ли у них, ещё предстоит узнать.
 
 @works_program
-title: Works program enacted!
+title: Начаты общественные работы!
 view-if: works_program > 0
 tags: endings
 go-to: eg_menu
 
-Our government has enacted a public works program!
+Наше правительство успешно борется с безработицей, начав программу общественных работ! Это очень сильно поможет в борьбе с экономической депрессией.
 
 @unemployment_reduced
 title: Unemployment has been reduced from its peak.
