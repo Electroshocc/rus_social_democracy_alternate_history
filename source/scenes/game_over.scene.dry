@@ -322,19 +322,19 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 = Достижения за данную партию
 
 
-[? if game_achievement_eiserne_front : **Eiserne Front** - сформируйте Стальной фронт. ?]
+[? if game_achievement_eiserne_front : **Eiserne Front** - Сформируйте Стальной фронт. ?]
 
-[? if game_achievement_civil_war : **Bürgerkrieg** - вступите в долгую гражданскую войну. ?]
+[? if game_achievement_civil_war : **Bürgerkrieg** - Вступите в долгую гражданскую войну. ?]
 
-[? if game_achievement_einigkeit : **Einigkeit** - достигните победы без гражданской войны на лёгком уровне сложности. ?]
+[? if game_achievement_einigkeit : **Einigkeit** - Достигните победы без гражданской войны на лёгком уровне сложности. ?]
 
-[? if game_achievement_einigkeit_und_recht : **Einigkeit und Recht** - достигните победы без гражданской войны на среднем уровне сложности. ?]
+[? if game_achievement_einigkeit_und_recht : **Einigkeit und Recht** - Достигните победы без гражданской войны на среднем уровне сложности. ?]
 
-[? if game_achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - достигните победы без гражданской войны на тяжёлом уровне сложности. ?]
+[? if game_achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - Достигните победы без гражданской войны на тяжёлом уровне сложности. ?]
 
-[? if game_achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - достигните победы без гражданской войны на историческом уровне сложности. ?]
+[? if game_achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - Достигните победы без гражданской войны на историческом уровне сложности. ?]
 
-[? if game_achievement_victory_for_the_republic: **Sieg für die Republik** - победите в гражданской войне. ?]
+[? if game_achievement_victory_for_the_republic: **Sieg für die Republik** - Победите в гражданской войне. ?]
 
 [? if game_achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Отбейте переворот в Пруссии. ?]
 
@@ -429,19 +429,19 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 = Достижения за всё время
 
 
-[? if achievement_eiserne_front : **Eiserne Front** - сформируйте Стальной фронт. ?]
+[? if achievement_eiserne_front : **Eiserne Front** - Сформируйте Стальной фронт. ?]
 
-[? if achievement_civil_war : **Bürgerkrieg** - вступите в долгую гражданскую войну. ?]
+[? if achievement_civil_war : **Bürgerkrieg** - Вступите в долгую гражданскую войну. ?]
 
-[? if achievement_einigkeit : **Einigkeit** - достигните победы без гражданской войны на лёгком уровне сложности. ?]
+[? if achievement_einigkeit : **Einigkeit** - Достигните победы без гражданской войны на лёгком уровне сложности. ?]
 
-[? if achievement_einigkeit_und_recht : **Einigkeit und Recht** - достигните победы без гражданской войны на среднем уровне сложности. ?]
+[? if achievement_einigkeit_und_recht : **Einigkeit und Recht** - Достигните победы без гражданской войны на среднем уровне сложности. ?]
 
-[? if achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - достигните победы без гражданской войны на тяжёлом уровне сложности. ?]
+[? if achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - Достигните победы без гражданской войны на тяжёлом уровне сложности. ?]
 
-[? if achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - достигните победы без гражданской войны на историческом уровне сложности. ?]
+[? if achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - Достигните победы без гражданской войны на историческом уровне сложности. ?]
 
-[? if achievement_victory_for_the_republic: **Sieg für die Republik** - победите в гражданской войне. ?]
+[? if achievement_victory_for_the_republic: **Sieg für die Republik** - Победите в гражданской войне. ?]
 
 [? if achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Отбейте переворот в Пруссии. ?]
 
@@ -534,19 +534,19 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 = Незавершённые достижения
 
-[? if not achievement_eiserne_front : **Eiserne Front** - сформируйте Стальной фронт. ?]
+[? if not achievement_eiserne_front : **Eiserne Front** - Сформируйте Стальной фронт. ?]
 
-[? if not achievement_civil_war : **Bürgerkrieg** - вступите в долгую гражданскую войну. ?]
+[? if not achievement_civil_war : **Bürgerkrieg** - Вступите в долгую гражданскую войну. ?]
 
-[? if not achievement_einigkeit : **Einigkeit** - достигните победы без гражданской войны на лёгком уровне сложности. ?]
+[? if not achievement_einigkeit : **Einigkeit** - Достигните победы без гражданской войны на лёгком уровне сложности. ?]
 
-[? if not achievement_einigkeit_und_recht : **Einigkeit und Recht** - достигните победы без гражданской войны на среднем уровне сложности. ?]
+[? if not achievement_einigkeit_und_recht : **Einigkeit und Recht** - Достигните победы без гражданской войны на среднем уровне сложности. ?]
 
-[? if not achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - достигните победы без гражданской войны на тяжёлом уровне сложности. ?]
+[? if not achievement_einigkeit_und_recht_und_freiheit : **Einigkeit und Recht und Freiheit** - Достигните победы без гражданской войны на тяжёлом уровне сложности. ?]
 
-[? if not achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - достигните победы без гражданской войны на историческом уровне сложности. ?]
+[? if not achievement_schwarz_rot_gold : **Schwarz-Rot-Gold** - Достигните победы без гражданской войны на историческом уровне сложности. ?]
 
-[? if not achievement_victory_for_the_republic: **Sieg für die Republik** - победите в гражданской войне. ?]
+[? if not achievement_victory_for_the_republic: **Sieg für die Republik** - Победите в гражданской войне. ?]
 
 [? if not achievement_bollwerk_der_demokratie: **Bollwerk der Demokratie** - Отбейте переворот в Пруссии. ?]
 
