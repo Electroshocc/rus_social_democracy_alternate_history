@@ -6,8 +6,6 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Доступно действие советника.';
 } else if (Q.advisor_action_timer == 1) {
     Q.pinnedCardsDescription = 'Действие советника доступно через 1 месяц.';
-} else if (Q.advisor_action_timer == 2 or 3) {
-    Q.pinnedCardsDescription = 'Действие советника доступно через ' + Q.advisor_action_timer + ' месяца.';
 } else {
     Q.pinnedCardsDescription = 'Действие советника доступно через ' + Q.advisor_action_timer + ' месяцев.';
 }
@@ -31,8 +29,6 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Доступно действие советника.';
 } else if (Q.advisor_action_timer == 1) {
     Q.pinnedCardsDescription = 'Действие советника доступно через 1 месяц.';
-} else if (Q.advisor_action_timer == 2 or 3) {
-    Q.pinnedCardsDescription = 'Действие советника доступно через ' + Q.advisor_action_timer + ' месяца.';
 } else {
     Q.pinnedCardsDescription = 'Действие советника доступно через ' + Q.advisor_action_timer + ' месяцев.';
 }
