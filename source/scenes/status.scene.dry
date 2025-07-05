@@ -119,19 +119,19 @@ if (Q.sa_strength) {
 
 = Полувоенные формирования
 
-{!<span class="tooltip-text" title="Reichsbanner Schwarz-Rot-Gold - народная организация, тесно связанная с СДПГ, ставящая себе целью защиту демократии.">**Рейхсбаннер**</span>!} сила: [+ rb_strength_2 +] тысяч
+{!<span class="tooltip-text" title="Reichsbanner Schwarz-Rot-Gold - народная организация, тесно связанная с СДПГ, ставящая себе целью защиту демократии.">Рейхсбаннер</span>!} сила: [+ rb_strength_2 +] тысяч
 
 Боеготовность Рейхсбаннера: [+ rb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="СКФ (Rotfrontkämpferbund) - коммунистическая организация КПГ.">**СКФ**</span>!} сила: [+ rfb_strength_2 +] тысяч
+{!<span class="tooltip-text" title="СКФ (Rotfrontkämpferbund) - коммунистическая организация КПГ.">СКФ</span>!} сила: [+ rfb_strength_2 +] тысяч
 
 Боеготовность СКФ: [+ rfb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="Штальхельм - правая консервативная организация ветеранов войны, тесно связанная с НННП.">**Штальхельм**</span>!} сила: [+ sh_strength_2 +] тысяч
+{!<span class="tooltip-text" title="Штальхельм - правая консервативная организация ветеранов войны, тесно связанная с НННП.">Штальхельм</span>!} сила: [+ sh_strength_2 +] тысяч
 
 Боеготовность Штальхельма: [+ sh_militancy : militancy +]
 
-{!<span class="tooltip-text" title="СА (Sturmabteilung) - полувоенная организация нацистов.">**СА**</span>!} сила: [+ sa_strength_2 +] тысяч
+{!<span class="tooltip-text" title="СА (Sturmabteilung) - полувоенная организация нацистов.">СА</span>!} сила: [+ sa_strength_2 +] тысяч
 
 Боеготовность СА: [+ sa_militancy : militancy +]
 
