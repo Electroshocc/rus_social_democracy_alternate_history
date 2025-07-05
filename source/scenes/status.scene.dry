@@ -20,8 +20,8 @@ if (Q.economic_growth) {
 
 Ресурсы: [+ resources +]
 
-Позиция СДПГ: [? if spd_toleration : Толерация ?][? if spd_in_government : В правительстве - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : оппозиция ?][? if spd_caretaker : временное правительство ?]
-[? if in_weimar_coalition and spd_in_government: Веймарская коалиция ?][? if in_grand_coalition and spd_in_government: Большая коалиция ?][? if in_popular_front and spd_in_government: Народный фронт ?][? if in_left_front and spd_in_government: Левый фронт ?][? if in_spd_majority and spd_in_government: Большинство в правительстве ?][? if in_minority_government and spd_in_government: в правительстве меньшинства ?][? if in_emergency_government and spd_in_government: чрезвычайное правительство ?]
+Позиция СДПГ: [? if spd_toleration : Толерация ?][? if spd_in_government : В правительстве - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : Оппозиция ?][? if spd_caretaker : Временное правительство ?]
+[? if in_weimar_coalition and spd_in_government: Веймарская коалиция ?][? if in_grand_coalition and spd_in_government: Большая коалиция ?][? if in_popular_front and spd_in_government: Народный фронт ?][? if in_left_front and spd_in_government: Левый фронт ?][? if in_spd_majority and spd_in_government: парламентское большинство ?][? if in_minority_government and spd_in_government: правительство меньшинства ?][? if in_emergency_government and spd_in_government: чрезвычайное положение ?]
 
 [? if spd_in_government and not in_spd_majority and not in_left_front : Коалиционный раздор: [+ coalition_dissent : coalition_dissent +] ?]
 
