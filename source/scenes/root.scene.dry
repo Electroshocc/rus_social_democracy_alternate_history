@@ -599,7 +599,7 @@ on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformi
 go-to: 1928_main
 
 @1928_historical
-subtitle: Максимально реалистичное и жоподробильное мочилово, сохранения и предсказания выборов не доступны. [? if not achievement_game_completed: Ты даже игру не проходил, куда лезешь, нубло?. ?]
+subtitle: Максимально реалистичное и жоподробильное мочилово, сохранения и предсказания выборов не доступны. [? if not achievement_game_completed: Ты даже игру не проходил, куда лезешь, нубло? ?]
 on-arrival: {!
 Q.difficulty = 2;
 Q.historical_mode = 1;
