@@ -90,13 +90,13 @@ if (Q.economic_growth) {
 
 = Внутренние фракции СДПГ
 
-{!<span class="tooltip-text" title="Левые заинтересованы в радикальных, революционных изменениях и кооперации с КПГ.">**Левые**</span>!} сила: [+ left_strength : strength +], раздор: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="Левые заинтересованы в радикальных, революционных изменениях и кооперации с КПГ.">Левые</span>!} сила: [+ left_strength : strength +], раздор: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Центр - часть центристских марксистов, выбирающая баланс между реформами и революцией.">**Центр**</span>!} сила: [+ center_strength : strength +], раздор: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="Центр - часть центристских марксистов, выбирающая баланс между реформами и революцией.">Центр</span>!} сила: [+ center_strength : strength +], раздор: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Цели трудовиков - улучшить благосостояние организованных рабочих.">**Трудовики**</span>!} сила: [+ labor_strength : strength +], раздор: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="Цели трудовиков - улучшить благосостояние организованных рабочих.">Трудовики</span>!} сила: [+ labor_strength : strength +], раздор: [+ labor_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Реформисты - прагматичные члены партии, желающие участия в правительстве и стабильности государства, предпочитая его традиционному марксизму.">**Рефомисты**</span>!} сила: [+ reformist_strength : strength +], раздор: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="Реформисты - прагматичные члены партии, желающие участия в правительстве и стабильности государства, предпочитая его традиционному марксизму.">Рефомисты</span>!} сила: [+ reformist_strength : strength +], раздор: [+ reformist_dissent : dissent +]
 
 [? if neorevisionism > 0 : **Неоревизионисты** сила: [+ neorevisionist_strength : strength +], раздор: [+ neorevisionist_dissent : dissent +] ?]
 
