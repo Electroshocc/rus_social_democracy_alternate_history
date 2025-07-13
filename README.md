@@ -1,4 +1,5 @@
-# Social Democracy: An Alternate History
+#Социал-демократия: альтернативная история (Русификатор)
+#Social Democracy: an Alternate History russian localization
 
 ## Included Libraries
 
