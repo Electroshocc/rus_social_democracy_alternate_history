@@ -78,7 +78,7 @@ if (Q.economic_growth) {
 
 {!<span class="tooltip-text" title="Партия Центра">Ц</span>!}: [+ z_relation : relationships +]
 
-{!<span class="tooltip-text" title="Немекая Демократическая Партия">!}[? if not ddp_name: НДП?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
+{!<span class="tooltip-text" title="Немецкая Демократическая Партия">!}[? if not ddp_name: НДП?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_relation : relationships +]
 
 {!<span class="tooltip-text" title="Немецкая Народная Партия">ННП</span>!}: [+ dvp_relation : relationships +]
 
