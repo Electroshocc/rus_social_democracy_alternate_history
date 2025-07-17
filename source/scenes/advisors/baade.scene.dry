@@ -1,13 +1,13 @@
-title: Fritz Baade
+title: Фриц Бааде
 is-pinned-card: true
 tags: advisor, reformist
 card-image: img/portraits/BaadeFritz.jpg
 view-if: baade_advisor = 1
 new-page: true 
 
-= Fritz Baade
+= Фриц Бааде
 
-Baade is one of the few agricultural experts in the SPD, and an unorthodox economist.
+Бааде - один из немногочисленных экспертов в области агрокультуры нашей партии, а также отличается нестандартным подходом к вмешательству государтсва в экономику.
 
 - @agriculture
 - @rural_campaign
@@ -15,29 +15,29 @@ Baade is one of the few agricultural experts in the SPD, and an unorthodox econo
 - @root: Return to main
 
 @agriculture
-title: Agricultural Policy
-subtitle: Baade is the Minister of Agriculture.
+title: Агрокультурная политика
+subtitle: Как министр агрокультуры, Бааде может внедрить некоторые новшества в данную отрасль экономики.
 choose-if: advisor_action_timer <= 0 and spd_in_government and agriculture_minister_party == "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not in government. ?][? if agriculture_minister_party != "SPD": The SPD does not have the Agriculture Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) перед следующим действием. ?][? if not spd_in_government : СДПГ не в правительстве. ?][? if agriculture_minister_party != "SPD": СДПГ не контролирует министерство агрокультуры. ?]
 on-arrival: advisor_action_timer = 6; agricultural_policy_timer -= 6; last_advisor_action = 1
 go-to: agricultural_policy
 
 
 @rural_campaign
-title: Rural Campaign
-subtitle: Try to campaign among the rural populace.
+title: Фермерская капмапния
+subtitle: Пропаганда среди фермеров.
 choose-if: advisor_action_timer == 0 and rural_policy > 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if rural_policy == 0 : We have not enacted any rural policies. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) перед следующим действием. ?][? if rural_policy == 0 : Мы ничего для них не сделали. ?]
 on-arrival: advisor_action_timer = 6; rural_spd += 5*(1-dissent); peoples_party_support += 1
 
-We have increased our campaigning among farmers and the rural populace.
+Мы провели кампанию среди агрокультурных работников.
 
 @depression
-title: Addressing the economic crisis
-subtitle: Formulate a plan to rescue us from the economic crisis.
+title: Рассмотреть экономический кризис
+subtitle: И сформулировать план выхода из него.
 choose-if: advisor_action_timer <= 0 and wtb_adopted = 0 and black_thursday_seen
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if wtb_adopted > 0 : We have already adopted the WTB-Plan. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) перед следующим действием. ?][? if black_thursday_seen == 0 : На данный момент экономика в порядке. ?][? if wtb_adopted > 0 : Мы уже приняли WTB-план. ?]
 on-arrival: advisor_action_timer = 6; wtb_support += 2; center_dissent += 10; labor_strength += 1
 
-The WTB-Plan, standing for its primary supporters Woytinsky, Tarnow, and Baade, has been adopted as the unions' plan for getting us out of the depression. Baade canvasses in favor of this plan throughout the party.
+Трудовым крылом партии был предложен WTB-план, названный в честь его создателей: Владимира Войтинского, Фрица Тарнова и Фрица Бааде.
 
