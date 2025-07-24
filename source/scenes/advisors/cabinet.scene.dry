@@ -1,4 +1,4 @@
-title: Cabinet
+title: Правительство
 is-pinned-card: true
 tags: advisor
 card-image: img/muller_cabinet.jpg
@@ -6,12 +6,12 @@ view-if: difficulty < 0 and spd_in_government and chancellor_party = "SPD"
 on-arrival: last_cabinet_action = 1
 new-page: true 
 
-= Cabinet
+= Правительство
 
-With an SPD chancellor and SPD cabinet members, we can direct the affairs of the national government.
+Учитывая, что СДПГ контролирует пост канцлера и некоторые министерства, мы можем задать повестку нашей страны во внеочередном порядке.
 
 - #cabinet
-- @back: Return to main
+- @back: Вернуться на главную
 
 @back
 on-arrival: last_cabinet_action = 0
