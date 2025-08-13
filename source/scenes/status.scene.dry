@@ -47,7 +47,7 @@ if (Q.economic_growth) {
 # 1928: 5, 1930: 4 (as DstP)
 {!<span class="tooltip-text" title="Немецкая Демократическая Партия">!}[? if not ddp_name: НДП?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ ddp_r +]%
 # 1928: 9, 1930: 5
-{!<span class="tooltip-text" title="Немецкая Нардоная Партия">ННП</span>!}: [+ dvp_r +]%
+{!<span class="tooltip-text" title="Немецкая Народная Партия">ННП</span>!}: [+ dvp_r +]%
 # 1928: 14, 1930: 7
 {!<span class="tooltip-text" title="Немекая Национальная Народная Партия">НННП</span>!}: [+ dnvp_r +]%
 # 1928: 3, 1930: 18
