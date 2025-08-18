@@ -37,7 +37,7 @@ go-to: confronting_nazis.iron_front
 title: Предупредить о нацистах
 subtitle: Рассказывая нашим членам об ужасах нацизма, мы можем расшевелить их к действию.
 choose-if: advisor_action_timer == 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01; nsdap_workers -= 4*(1-dissent);
 
 Мы начали кампанию пропаганды, направленной против нацизма.
