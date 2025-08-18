@@ -1,4 +1,4 @@
-title: Carlo Mierendorff
+title: Карло Миерендорфф
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/MierendorffCarlo.jpg
@@ -6,9 +6,9 @@ view-if: mierendorff_advisor = 1
 new-page: true
 #face-image: img/portraits/MierendorffCarlo.jpg
 
-= Carlo Mierendorff
+= Карло Миерендорфф
 
-Carlo Mierendorff is the founder of the neo-revisionist ideological tendency, and supports both democratic reforms and extra-parliamentary action to combat the Nazis and authoritarian parties. He is from a middle-class, academic background, and is one of our youngest leaders.
+Карло миерендорфф - лидер новой идеи нео-ревизионизма, поддерживающий любые, конституционные или нет, способы борьбы с нацистами и другими радикалами. Он - интеллигент и выходец из среднего класса, а также один из самых молодых наших лидеров.
 
 - @iron_front_buildup
 - @form_iron_front
@@ -16,17 +16,17 @@ Carlo Mierendorff is the founder of the neo-revisionist ideological tendency, an
 - @root: Return to main
 
 @iron_front_buildup
-title: Build up the Iron Front
-subtitle: Increase our propaganda measures to recruit more members into the Reichsbanner. 
+title: Усилить Стальной фронт
+subtitle: Увеличить нашу пропаганду, дабы нанимать людей в наши организации. 
 choose-if: advisor_action_timer == 0 and iron_front_formed
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed == 0 : The Iron Front has not yet been formed. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if iron_front_formed == 0 : Стальной фронт ещё не создан. ?]
 on-arrival: advisor_action_timer = 6; rb_strength += 200*workers_spd/(workers_spd+workers_kpd+workers_nsdap+workers_z+workers_dnvp+workers_other);
 
-We have recruited more members into the Reichsbanner.
+Мы наняли ещё больше людей в Рейхсбаннер и Стальной фронт.
 
 
 @form_iron_front
-title: Forming the Iron Front
+title: Сформировать Стальной фронт
 choose-if: advisor_action_timer == 0 and iron_front_formed == 0 and nazi_urgency >= 2
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed : The Iron Front has already been formed. ?][? if nazi_urgency < 2 : The party does not yet see the danger of the Nazis. ?]
 on-arrival: advisor_action_timer = 6; rb_strength += 50; nazi_urgency += 1
@@ -34,10 +34,10 @@ go-to: confronting_nazis.iron_front
 
 
 @nazi_urgency
-title: Warning about the Nazis
-subtitle: By warning the party about the Nazis, we can spur our members to action.
+title: Предупредить о нацистах
+subtitle: Рассказывая нашим членам об ужасах нацизма, мы можем расшевелить их к действию.
 choose-if: advisor_action_timer == 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 on-arrival: advisor_action_timer = 6; nazi_urgency += 1; rb_militancy += 0.01; nsdap_workers -= 4*(1-dissent);
 
-We have begun a propaganda campaign to warn our members away from the Nazis.
+Мы начали кампанию пропаганды, направленной против нацизма.
