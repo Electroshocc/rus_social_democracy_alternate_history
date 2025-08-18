@@ -28,7 +28,7 @@ on-arrival: advisor_action_timer = 6; rb_strength += 200*workers_spd/(workers_sp
 @form_iron_front
 title: Сформировать Стальной фронт
 choose-if: advisor_action_timer == 0 and iron_front_formed == 0 and nazi_urgency >= 2
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if iron_front_formed : The Iron Front has already been formed. ?][? if nazi_urgency < 2 : The party does not yet see the danger of the Nazis. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if iron_front_formed : Стально фронт уже сформирован. ?][? if nazi_urgency < 2 : Партия не видит особой опасности в нацистах. ?]
 on-arrival: advisor_action_timer = 6; rb_strength += 50; nazi_urgency += 1
 go-to: confronting_nazis.iron_front 
 
