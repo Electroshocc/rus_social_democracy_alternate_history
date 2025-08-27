@@ -1,13 +1,13 @@
-title: Antonie Pfülf
+title: Антони Пфюльф
 is-pinned-card: true
 tags: advisor, centrist
 card-image: img/portraits/PfülfAntonie.jpg
 view-if: pfulf_advisor = 1
 new-page: true 
 
-= Antonie Pfülf
+= АНтони Пфюльф
 
-Pfülf is a former teacher from Bavaria who came from a conservative Catholic family. She is an activist for women's rights and for broadening the support of the SPD. 
+Пфюльф - бывшая учительница из Баварии, родившаяся в семье консервативных католиков. Она активистка за права женщин и поддерживает идею расширения агитации СДПГ на весь народ. 
 
 - @support_peoples_party
 - @build_peoples_party
@@ -16,38 +16,38 @@ Pfülf is a former teacher from Bavaria who came from a conservative Catholic fa
 - @root: Return to main
 
 @support_peoples_party
-title: Build support for a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: Заручиться поддержкой для народной партии
+subtitle: Может, нам стоит получать свою поддержку не только у рабочего класса?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if peoples_party_support > 4: Нам уже хватает поддержки для создания народной партии. ?]
 on-arrival: advisor_action_timer = 6; peoples_party_support += 1; reformist_strength += 5;
 
-We are building up support for the idea of a People's Party.
+Мы заручаемся поддержкой в партии для её преобразования в народную.
 
 @build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: Учредить народную партию
+subtitle: Можем ли мы расширить нашу партию на все слои населения?
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if peoples_party_support < 3: Нам не хватает для этого поддержки. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party
 
 @campaigning_peoples_party
-title: Campaigning as a People's Party
-subtitle: Campaigning with some of our previously nontraditional demographics.
+title: Агитация народной партии
+subtitle: Провести кампании среди нетрадиционных для нас классов.
 view-if: peoples_party = 1
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: peoples_party_campaigning
 
 
 @womens_rights_
 title: Women's rights
-subtitle: Enact policy with regards to women's rights.
+subtitle: Установить политику по отношению к женщинам.
 choose-if: advisor_action_timer = 0 and spd_in_government
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if not spd_in_government : На данный момент СДПГ не в правительстве. ?]
 on-arrival: advisor_action_timer = 6; womens_rights_timer -= 10; last_advisor_action = 1
 go-to: womens_rights
