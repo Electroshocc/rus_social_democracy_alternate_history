@@ -1,13 +1,13 @@
-title: Kurt Schumacher
+title: Курт Шумахер
 is-pinned-card: true
 tags: advisor, neorevisionist
 card-image: img/portraits/SchumacherKurt.jpg
 view-if: schumacher_advisor = 1
 new-page: true 
 
-= Kurt Schumacher
+= Курт Шумахер
 
-A Great War veteran and a neorevisionist leader, Kurt Schumacher argues for a strong resistance against the Nazis.
+Курт Шумахер - Ветеран Великой войны и лидер ревизионистов. Он поддерживает идею сопротивления нацистам любой ценой.
 
 - @emergency_fundraising
 - @build_reichsbanner
@@ -15,30 +15,30 @@ A Great War veteran and a neorevisionist leader, Kurt Schumacher argues for a st
 - @root: Return to main
 
 @emergency_fundraising
-title: Emergency Fundraising
-subtitle: An emergency infusion of resources.
+title: Экстренный сбор средств
+subtitle: Внеочередной сбор партийных взносов.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; resources += dues
 #view-if: difficulty < 1
 
 # Schumacher's emergency fundraising is available on all difficulties.
 
-We have gained +[+ dues +] resources.
+Мы получили +[+ dues +] ресурс(а).
 
 @build_reichsbanner
-title: Reichsbanner
-subtitle: Schumacher supports providing more resources to the Reichsbanner.
+title: Рейхсбаннер
+subtitle: Шумахер поддерживает увеличение спонсирования Рейхсбаннера.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; reichsbanner_timer -= 6; last_advisor_action = 1
 go-to: reichsbanner
 
 @moderate_economic_plan
-title: Support the reformist economic plan
-subtitle: Call for a limited program of job creation without deficit spending.
+title: Поддерживать реформистский экономический план
+subtitle: Поддержать программу общественных работ, не ударяясь при этом в дефицит и долги.
 choose-if: advisor_action_timer = 0 and moderate_plan_adopted = 0 and black_thursday_seen = 1
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if moderate_economic_plan = 0 : We have already adopted the reformist economic plan. ?] [? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?] [? if moderate_economic_plan = 0 : Мы уже приняли этот план. ?] [? if black_thursday_seen == 0 : На данный момент мы не в кризисе. ?]
 on-arrival: advisor_action_timer = 6
 go-to: crisis_program.support_moderate
 
