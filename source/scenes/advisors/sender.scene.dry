@@ -1,13 +1,13 @@
-title: Toni Sender
+title: Тони Зендер
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/SenderToni.jpg
 view-if: sender_advisor = 1
 new-page: true 
 
-= Toni Sender
+= Тони Зендер
 
-Toni Sender is an organizer and writer who came from a bourgeois family, but was radicalized into socialism after her experiences in the workforce. She was a member of the anti-war USPD, but did not support armed revolution.
+Тони Зендер - организатор и писатель из буржуазной семьи, но ставшая социалисткой после её опыта работы на заводе. Она была участницей антивоенной НСДПГ, но не поддержала вооружённую революцию.
 
 - @left_unity
 - @organizing_women
@@ -16,41 +16,41 @@ Toni Sender is an organizer and writer who came from a bourgeois family, but was
 - @root: Return to main
 
 @left_unity
-title: Left-Center Unity
-subtitle: Encourage cooperation between the left and center wings of the party.
+title: Единство левых и центра
+subtitle: Поддержать кооперацию левого крыла и центра нашей партии.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; left_dissent -= 10; labor_dissent -= 5; center_dissent -= 10; reformist_dissent -= 10; neorevisionist_dissent -= 5
 
-We have reduced dissent among the party's factions.
+Мы уменьшили раздор внутри нашей партии.
 
 @organizing_women
-title: Organizing women
-subtitle: Sender's strategies are aimed at young working women.
+title: Оранизовать женщин
+subtitle: Зендер направляет свою кампанию на молодых работящих женщин.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: womens_rights += 1; workers_spd += 3*(1-dissent); new_middle_spd += 5*(1-dissent); advisor_action_timer = 6
 
-Sender's message is popular among young women working in the service sector, and we have recruited many white-collar employees.
+Многие женщины из рабочего класса прислушались к речам Зендер, и теперь они нас поддерживают.
 
-[? if spd_r < 50 : Unfortunately, women still disproportionately support the bourgeois parties. ?]
+[? if spd_r < 50 : И всё же, к сожалению, большинство женщин всё ещё поддерживает буржуазные партии. ?]
 
 @against_toleration
-title: Against toleration
+title: Против толерации
 view-if: not constructive_vonc
-subtitle: Break our current toleration arrangement, and bring down the government via a no-confidence vote.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if spd_toleration == 0 : The SPD is not currently in toleration. ?]
+subtitle: Разорвать наше нынешнее соглашение с буржуазными партиями, начав тем самым новые выборы.
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?] [? if spd_toleration == 0 : На данный момент СДПГ не предоставляет никому толерацию. ?]
 choose-if: advisor_action_timer == 0 and spd_toleration
 on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time + 3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; spd_toleration = 0; left_strength += 8; pro_republic -= 4; new_middle_spd -= 3; rural_spd -= 3; old_middle_spd -= 3; catholics_spd -= 3; reformist_dissent += 8
 
-We have grown tired of the burdens of toleration, and have called a vote of no confidence in the current minority government.
+Мы устали от толерации и выдвинули вотум недовеия нынешнему правительству меньшинства.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+Новые выборы были назначены на [+ next_election_month : month +] [+ next_election_year +].
 
 @crisis
-title: Addressing the economic crisis
-subtitle: Sender can help support a left-wing economic program.
+title: Решение экономического кризиса
+subtitle: Зендер поддерживает левый экономический план.
 choose-if: advisor_action_timer <= 0 and nationalization_adopted == 0 and black_thursday_seen == 1 and nationalization_support <= 3
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if black_thursday_seen == 0 : We are not currently in an economic crisis. ?][? if nationalization_adopted > 0 : We have already adopted the Left plan. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if black_thursday_seen == 0 : На данный момент мы не находимся в состоянии кризиса. ?][? if nationalization_adopted > 0 : Мы уже приняли этот план. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: crisis_program.support_left
