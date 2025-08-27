@@ -16,7 +16,7 @@ new-page: true
 
 @emergency_fundraising
 title: Экстренный сбор средств
-subtitle: Внеочередной сбор ресурсов партии.
+subtitle: Внеочередной сбор взносов партии.
 view-if: difficulty < 1
 choose-if: advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] Месяца(ев) до след. действия. ?]
