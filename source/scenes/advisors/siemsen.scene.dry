@@ -1,13 +1,13 @@
-title: Anna Siemsen
+title: Анна Симзен
 is-pinned-card: true
 tags: advisor, left
 card-image: img/portraits/SiemsenAnna.jpg
 view-if: siemsen_advisor = 1
 new-page: true 
 
-= Anna Siemsen
+= Анна Симзен
 
-Anna Siemsen is an educational reform advocate and pacifist, who was one of the few German women to receive a PhD in the pre-war period. She was a former member of the USPD.
+Анна Симсен - паифистка-бывший член НСДПГ, поддерживающая реформу образования, а также одна из единиц, получившая докторскую степень до Великой войны, будучи женщиной.
 
 - @campaign_pacifism
 - @structure_
@@ -15,25 +15,25 @@ Anna Siemsen is an educational reform advocate and pacifist, who was one of the 
 - @root: Return to main
 
 @campaign_pacifism
-title: Rally for pacifism.
-subtitle: Campaign for internationalism and against militarism.
+title: Кампания за пацифизм.
+subtitle: Провести кампанию в поддержку пацифизма и интернационализма.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6;
 go-to: rally.pacifism
 
 
 @curriculum_
-title: Change the educational curriculum.
+title: Изменить направление образования.
 choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and spd_prussia and curriculum_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if chancellor_party != "SPD": The SPD must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?][? if curriculum_timer > 0 : It is too early to change the curriculum again. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if not spd_in_government : На данный момент СДПГ не в правительстве. ?][? if chancellor_party != "SPD": СДПГ должна контролировать пост канцлера. ?][? if not spd_prussia: СДПГ должна контролировать Пруссию. ?][? if curriculum_timer > 0 : Мы уже меняли направление недавно. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.curriculum
 
 
 @structure_
-title: Change the structure and funding of education.
+title: Изменить структуру и субсидирование образования.
 choose-if: advisor_action_timer = 0 and spd_in_government and chancellor_party = "SPD" and spd_prussia
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government : The SPD is not currently in government. ?][? if chancellor_party != "SPD": The SPD must control the chancellorship. ?][? if not spd_prussia: The SPD must control the Prussian government. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if not spd_in_government : На данный момент СДПГ не в правительстве. ?][? if chancellor_party != "SPD": СДПГ должная контролировать пост канцлера. ?][? if not spd_prussia: СДПГ должна контролировать Пруссию. ?]
 on-arrival: advisor_action_timer = 6; last_advisor_action = 1
 go-to: education_science.structure
