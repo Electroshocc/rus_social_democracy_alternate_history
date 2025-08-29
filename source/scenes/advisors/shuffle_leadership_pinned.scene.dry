@@ -1,4 +1,4 @@
-title: Shuffle Leadership
+title: Изменить Лидерство
 view-if: difficulty < 0
 new-page: true
 is-card: true
