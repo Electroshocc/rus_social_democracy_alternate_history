@@ -1,13 +1,13 @@
-title: Friedrich Stampfer
+title: Фридрих Штампфер
 is-pinned-card: true
 tags: advisor
 card-image: img/portraits/StampferFriedrich.jpg
 view-if: stampfer_advisor = 1
 new-page: true 
 
-= Friedrich Stampfer
+= Фридрих Штампфер
 
-Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party newspaper, and also a Reichstag member. He was historically part of the Majority SPD that supported our participation in the Great War, but also supports cooperation with the KPD to save the Republic.
+Штампфер - давний главный редактор "Вперёд!", нашей партийной газеты, а также депутат Рехстага. Исторически он был в большинстве партии, поддержавшем наше участие в Великой войне, однако он поддерживает наше сотрудничество с КПГ.
 
 - @media_
 - @faction_support_
@@ -16,60 +16,60 @@ Friedrich Stampfer is the long-time editor-in-chief of Vorwärts, our party news
 
 
 @media_
-title: Media
-subtitle: Manage our party's newspapers and media.
+title: Медиа
+subtitle: Управление нашей газетой и другими медиа-ресурсами.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; media_timer -= 6; last_advisor_action = 1
 go-to: media
 
 
 @faction_support_
-title: Editorial Line
-subtitle: We can change the editorial line of Vorwärts to support a particular faction.
+title: Линия редактуры
+subtitle: Мы можем использовать нашу газету, чтобы поддержать какую-либо из фракций.
 choose-if: advisor_action_timer = 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6
 
-Which faction should we support?
+Какую фракцию нам поддержать?
 
-- @support_left: Left
-- @support_center: Center
-- @support_labor: Labor
-- @support_reform: Reformists
-- @support_neorev: Neorevisionists
+- @support_left: Левые
+- @support_center: Центр
+- @support_labor: Трудовики
+- @support_reform: Реформисты
+- @support_neorev: Неоревизионисты
 
 @support_left
 on-arrival: left_dissent -= 8; left_strength += 8
 
-Vorwärts prints editorials in support of Left positions.
+Линия редактуры "Вперёд!" была смещена в поддержку левых.
 
 @support_center
 on-arrival: center_dissent -= 8; center_strength += 8
 
-Vorwärts prints editorials in support of centrist positions.
+Линия редактуры "Вперёд!" была смещена в поддержку центра.
 
 @support_labor
 on-arrival: labor_dissent -= 8; labor_strength += 8
 
-Vorwärts prints editorials in support of the policies of the trade unions.
+Линия редактуры "Вперёд!" была смещена в поддержку профсоюзов.
 
 @support_reform
 on-arrival: reformist_dissent -= 8; reformist_strength += 8;
 
-Vorwärts prints editorials in support of the reformist policies.
+Линия редактуры "Вперёд!" была смещена в поддержку реформистов.
 
 @support_neorev
 view-if: neorevisionism
 on-arrival: neorevisionist_dissent -= 8; neorevisionist_strength += 8
 
-Vorwärts prints editorials in support of neorevisionist ideas.
+Линия редактуры "Вперёд!" была смещена в поддержку неоревизионистов.
 
 @kpd_cooperation
-title: Cooperation with the KPD
-subtitle: Could we build closer ties with the KPD?
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+title: Кооперация с КПГ
+subtitle: Можем ли мы укрепить наши связи с КПГ?
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 choose-if: advisor_action_timer = 0
 on-arrival: advisor_action_timer = 6; left_strength += 2; kpd_relation += 4*(1-dissent); reformist_dissent += 2
 
-Stampfer works towards closer ties with the KPD through our media.
+Штампфер использует газету для поддержки сотрудничества с КПГ.
