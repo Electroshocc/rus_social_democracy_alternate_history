@@ -25,4 +25,4 @@ view-if: year = 1931 and month = 1
 priority: 2
 max-visits: 1
 
-A new year begins. [? if works_program = 0 : Unemployment continues to spiral upwards. The strength of the NSDAP continues to rise. ?][? if works_program > 0 : A works program has been enacted in order to reduce unemployment. ?] [? if works_program > 0 and unemployment > 15 : However, unemployment remains too high for comfort. ?]
+Начался новый год. [? if works_program = 0 : Уровень безработицы продолжает стремительно расти, а в месте с ней и сила НСДАП. ?][? if works_program > 0 : Нами была разработана программа по борьбе с безработицей. ?] [? if works_program > 0 and unemployment > 15 : Однако, безработица всё ещё превышает премлемые показатели. ?]
