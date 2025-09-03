@@ -1,33 +1,32 @@
-title: Rudolf Wissell
+title: Рудольф Виссель
 is-pinned-card: true
 tags: advisor, labor
 card-image: img/portraits/WissellRudolf.jpg
 view-if: wissell_advisor = 1
 new-page: true 
 
-= Rudolf Wissell
+= Рудольф Виссель
 
-Wissell is a labor economist working for the ADGB, the federation of free trade unions, and has been a labor minister on multiple occasions. His priority is to improve conditions for organized workers.
-
+Виссель - экономист-член АДГБ, поддерживающий профсоюзы, а также давний министр труда. Он всеми силами старается улучшить положение организованных рабочих.
 - @labor_rights_
 - @union_unity
 - @root: Return to main
 
 @labor_rights_
-title: Labor Rights
-subtitle: As Labor Minister, Wissell can help set regulations for working conditions.
+title: Права трудящихся
+subtitle: Как министр труда, Виссель может помочь в регулировании положения рабочих.
 choose-if: advisor_action_timer <= 0 and spd_in_government and labor_minister_party = "SPD"
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if labor_minister_party != "SPD" : The SPD does not control the Labor Ministry. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?][? if labor_minister_party != "SPD" : СДАГ не контролирует министерство труда. ?]
 on-arrival: advisor_action_timer = 6; labor_rights_timer -= 10; last_advisor_action = 1
 go-to: labor_rights
 
 
 @union_unity
-title: Union-party coordination
-subtitle: Reduce dissent among the unions.
+title: Кооперация профсоюзов и партии
+subtitle: Усилить сотрудничество с провсоюзами, уменьшая их недовольство.
 choose-if: advisor_action_timer <= 0
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
 
-We have reduced tensions with the Labor faction, and increased its strength in the party.
+Мы уменьшили недовольство профсоюзников, увеличив из силу в партии.
 
