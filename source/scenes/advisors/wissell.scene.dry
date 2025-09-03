@@ -23,7 +23,7 @@ go-to: labor_rights
 
 @union_unity
 title: Кооперация профсоюзов и партии
-subtitle: Усилить сотрудничество с провсоюзами, уменьшая их недовольство.
+subtitle: Усилить сотрудничество с профсоюзами, уменьшая их недовольство.
 choose-if: advisor_action_timer <= 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] месяца(ев) до след. действия. ?]
 on-arrival: advisor_action_timer = 6; labor_dissent -= 5; labor_strength += 5
