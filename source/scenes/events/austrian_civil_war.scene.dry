@@ -1,43 +1,43 @@
-title: Uprising in Austria
+title: Восстание в Австрии
 new-page: true
-subtitle: In response to police attacks, the Austrian socialists are rising up...
+subtitle: В ответ на полицейские облавы, автрийцы подняли революцию...
 view-if: year = 1934 and (month = 2 or month = 3) and austrian_parliament_seen
 max-visits: 1
 on-arrival: austrian_civil_war_seen = 1
 face-image: img/schutzbund.png
 tags: event
 
-= Uprising in Austria
+= Восстание в Австрии
 
 # pre-emptive democratic victory if sdapo strength >= 6
 # long civil war if sdapo_strength = 5 or 4 - opportunity for interference/forced peace
 # instant defeat if sdapo_strength < 4
 
-The crisis in Austria is continuing. The "Austrofascist" government led by Engelbert Dollfuß continues to rule by emergency decree. It has been persecuting its political opposition, primarily the social democrats of the SDAPÖ.
+Кризис в Австрии продолжается. Авсрофашистское правительство Энгельберта Дольфуса продолжает править экстренными указами. Оно преследовало политических оппонентов, в основном социал-демократов и СДПА.
 
-[? if sdapo_strength < 6: Now, Austria is entering a state of civil war. When the police attempted to seize weapons from the Republikanischer Schutzbund, the Schutzbund responded with force, shooting at the government troops. Fighting has sporadically broken out between Schutzbund and government forces all over Austria. ?]
+[? if sdapo_strength < 6: Теперь Австрия в состоянии гражданской войны. Когда полиция попыталась отобрать оружие у Республиканского Союза Защиты, Шутцбунд ответил силой, открыв огонь по полицейским. После этого по всей Австрии начались стычки социал-демократов с правительственными силами. ?]
 
-[? if sdapo_strength >= 6: The government's attempts to suppress the socialist party and the Schutzbund were met with mass protest, supported by the SPD[? if foreign_minister_party = "SPD":  and the German government?]. [? if eu_austria: They are also supported by the recently formed European Union, with economic sanctions targeting the government. ?] ?]
+[? if sdapo_strength >= 6: Попытки подавить социал-демократическую партию Австрии были встречены массовыми протестами, поддерживаемыми СДПГ[? if foreign_minister_party = "SPD":  и немецким правительством?]. [? if eu_austria: Также недавно образованный ЕС наложил санкции на правительство, поддержав повстанцев. ?] ?]
 
-Eventually...
+В итоге...
 
 - @crushed
 - @long_war
 - @sdapo_victory
 
 @crushed
-title: The rebellious Schutzbund has been crushed.
+title: Повстанческие силы были сокрушены.
 on-arrival: austria_defeat = 1
 view-if: sdapo_strength < 4
 
-The uprising lasted for no more than a few days before it was crushed. The Schutzbund and SDAPÖ were too weak and too divided to stand against the forces of the state.
+Восстание было подавлено спустя несколько дней после начала. Союз защиты и СДПА были слишком слабы и разрозненны, чтобы противостоять правительству.
 
 @long_war
-title: It is a civil war.
+title: Это гражданская война.
 view-if: sdapo_strength = 5 or sdapo_strength = 4
 on-arrival: austria_civil_war = 1
 
-Neither side is backing down, and the SDAPÖ have formed an alternative government after defeating the government troops in some cities. Austria is in a state of civil war.
+Ни одна их сторон не собирается отступать, а СДПА организовала собственное правительство в некоторых городах после победы над полицией. Австрия перешла в состояние настоящей гражданской войны.
 
 - @support_sdapo_party
 - @support_sdapo_govt
@@ -45,24 +45,24 @@ Neither side is backing down, and the SDAPÖ have formed an alternative governme
 - @long_war_2
 
 @support_sdapo_party
-title: As a party, the SPD will provide the SDAPÖ with support.
+title: Как партия-побратим, СДПГ поддержит СДПА оружием и добровольцами.
 subtitle: -2 resources
 choose-if: resources >= 2
 on-arrival: resources -= 2; sdapo_strength += 1
 go-to: sdapo_victory if sdapo_strength >= 6; long_war_2 if sdapo_strength < 6
 
-The SPD raises its resources to provide arms and volunteers for the SDAPÖ.
+СДПГ собрала некоторые средства и использовала их для поддержки СДПА, отправив добровольцев и часть оружия со своих складов.
 
 @support_sdapo_govt
-title: The Foreign Ministry will support the democratic Austrian forces.
+title: МИД поддержит демократические силы.
 view-if: spd_in_government and foreign_minister_party = "SPD"
 on-arrival: sdapo_strength += 1
 go-to: sdapo_victory if sdapo_strength >= 6; long_war_2 if sdapo_strength < 6
 
-We provide diplomatic and some financial and material support to the SDAPÖ forces.
+Мы дипломатически и финансово поддержали СДПА в их борьбе.
 
 @force_peace
-title: Can we bring the sides together for a peace?
+title: Мы можем принудить обе стороны к миру?
 view-if: spd_in_government and foreign_minister_party = "SPD" and sdapo_strength = 5
 on-arrival: austria_peace = 1; pro_republic += 3; coup_progress -= 1
 achievement: arbeiter_von_wien
