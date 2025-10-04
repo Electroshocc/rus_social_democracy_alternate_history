@@ -33,7 +33,7 @@ view-if: sdapo_strength < 4
 Восстание было подавлено спустя несколько дней после начала. Союз защиты и СДПА были слишком слабы и разрозненны, чтобы противостоять правительству.
 
 @long_war
-title: Это гражданская война.
+title: Началась гражданская война.
 view-if: sdapo_strength = 5 or sdapo_strength = 4
 on-arrival: austria_civil_war = 1
 
@@ -45,7 +45,7 @@ on-arrival: austria_civil_war = 1
 - @long_war_2
 
 @support_sdapo_party
-title: Как партия-побратим, СДПГ поддержит СДПА оружием и добровольцами.
+title: Как партия с той же идеологией, СДПГ поддержит СДПА оружием и добровольцами.
 subtitle: -2 resources
 choose-if: resources >= 2
 on-arrival: resources -= 2; sdapo_strength += 1
@@ -67,23 +67,23 @@ view-if: spd_in_government and foreign_minister_party = "SPD" and sdapo_strength
 on-arrival: austria_peace = 1; pro_republic += 3; coup_progress -= 1
 achievement: arbeiter_von_wien
 
-The Austrian government obviously sees us as biased, so there is no way they will let us host peace negotiations. However, negotiations begin nonetheless. In Switzerland, with Fascist Italy as the Austrofascists' protector and Germany as the SDAPÖ's, a peace deal is hammered out. The socialists are disarmed and give up all pretense of revolution, while the right-wing paramilitaries are also disarmed. Dictatorship ends, and normal government is restored, with free elections.
+Австрийское правитеьство считает нас предвзятыми, так что они недовольны нашим участием в переговорах. Несмотря на это, процесс уже был начат. В Швейцарии, при участии фашистской Италии как стороны поддержки австрофашистов, был заключён мирный договор. Социалисты отказываются от революции и сдают всё оружие взамен на симметричные действия со стороны отрядов австрофашистов. Диктатура пала, и были восстановлены свободные выборы.
 
-Given the SDAPÖ's starting position, this is treated as a victory. Now begins the long work of reconstruction...
+Учитывая позиции СДПА  вначале, исход можно считать победой. Теперь начинается долгий процесс восстановления...
 
 @long_war_2
-title: There is nothing we can do.
+title: Мы ничего не можем поделать.
 on-arrival: z_relation -= 6; dvp_relation -= 6; ddp_relation -= 3; catholics_spd -= 5; old_middle_spd -= 5; coalition_dissent += 1; economic_growth -= 0.5
 
-No matter our efforts, the war continues. Too many lives are extinguished. Refugees begin to flow into Germany, and trade suffers. Many are calling our Austrian interference a mistake.
+Несмотря на наши усилия, война продолжается. Было потеряно ужасно много жизней. В Германию начинают стекаться беженцы, а торговля тем временем страдает. Многие называют наше вмешательство в Австрию ошибкой.
 
 
 @sdapo_victory
-title: The Austrofascists are backing down!
+title: Австрофашисты отступили!
 on-arrival: pro_republic += 5; west_relation += 1; east_relation += 1; austria_victory = 1; reichswehr_loyalty += 0.1; coup_progress -= 2
 view-if: sdapo_strength >= 6
 achievement: arbeiter_von_wien
 
-The result is that the Austrofascists have backed down! Caught in an untenable position domestically and abroad, they have agreed to restore the National Council and resign from government, holding new elections. Now begins the long work of reconstruction. Our countries are likely to be brought closer together as a result.
+После полномасштабных протестов правительство отступило! Ему пришось уйти в отставку и провести свободные выборы. Теперь начинается процесс восстановления. Скорее всего, это приведёт к сближению между нашими странами.
 
-[? if eu_austria: This is a great success of the new European Union, and its prestige is seen to rise internationally. ?]
+[? if eu_austria: Это можно считать успехом новообразованного Европейского Союза и его дипломатических усилий. ?]
