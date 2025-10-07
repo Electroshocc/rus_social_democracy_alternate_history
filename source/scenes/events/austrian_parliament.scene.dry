@@ -1,6 +1,6 @@
-title: Suspension of the Austrian parliament
+title: Приостановка австрийского парламента
 new-page: true
-subtitle: Our southern neighbor is sliding into dictatorship.
+subtitle: Наш южный сосед скатывается в диктатуру.
 view-if: year = 1933 and (month = 3 or month = 4) and ((spd_in_government and foreign_minister_party = "SPD") or (austria_relation >= 1))
 max-visits: 1
 on-arrival: austrian_parliament_seen = 1
@@ -9,9 +9,9 @@ tags: event
 
 # Must control foreign ministry or have made contact with Austrian socialists.
 
-= Suspension of the Austrian Parliament
+= Приостановка действия австрийского парламента
 
-Due to a controversial proposal regarding a railroad strike in the Austrian National Council, all three presidents of the National Council resigned, leaving it without any presiding officers. This is a constitutional crisis. Austrian chancellor Engelbert Dollfuß has taken advantage of this crisis by suspending the parliament and ruling by emergency decree, forming an "Austrofascist" government. Dollfuß consolidates his power by persecuting his political opponents, especially our fellow Social Democrats in the SDAPÖ (Social Democratic Worker's Party of Austria).
+яИз-за скандала касаемо железнодорожной стачки в австрийском национальном совете все три президента совета ушли в отставку, оставив его без лидера. Это конституционный кризис. Австрийский канцлер Энгельберт Дольфус решил воспользоваться ситуацией и распустил парламент, установив правление путём чрезвычайных указов, forming an "Austrofascist" government. Dollfuß consolidates his power by persecuting his political opponents, especially our fellow Social Democrats in the SDAPÖ (Social Democratic Worker's Party of Austria).
 
 Is there anything we could do?
 
