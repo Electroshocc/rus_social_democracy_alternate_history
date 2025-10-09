@@ -11,45 +11,45 @@ tags: event
 
 = Приостановка действия австрийского парламента
 
-яИз-за скандала касаемо железнодорожной стачки в австрийском национальном совете все три президента совета ушли в отставку, оставив его без лидера. Это конституционный кризис. Австрийский канцлер Энгельберт Дольфус решил воспользоваться ситуацией и распустил парламент, установив правление путём чрезвычайных указов, forming an "Austrofascist" government. Dollfuß consolidates his power by persecuting his political opponents, especially our fellow Social Democrats in the SDAPÖ (Social Democratic Worker's Party of Austria).
+яИз-за скандала касаемо железнодорожной стачки в австрийском национальном совете все три президента совета ушли в отставку, оставив его без лидера. Это конституционный кризис. Австрийский канцлер Энгельберт Дольфус решил воспользоваться ситуацией и распустил парламент, установив правление путём чрезвычайных указов и сформировав "Австрофашистское" правительство. Дольфус консолдирует свою власть путём преследования оппозиции, особенно наших братьев из социал-демократической рабочей партии Австрии.
 
-Is there anything we could do?
+Можем ли мы что-нибудь поделать?
 
 # - use EU to sanction Austria (will prevent civil war and restore democracy)
 # - apply diplomatic pressure to Austria (without EU)
 # - fund the Schutzbund
 # after this, supporting Austrians will raise sdapo_strength; if sdapo_strength >= 2, they'll enter a long civil war; if sdapo_strength >= 5, they'll win.
 
-- @eu_sanctions: Call upon the European Union to sanction Austria, unless the National Council is restored.
-- @diplomatic_pressure: Apply diplomatic pressure to Austria to restore the National Council.
-- @fund_schutzbund: Support the SDAPÖ's underground organizing.
-- @nothing: Nothing can be done.
+- @eu_sanctions: Призвать ЕС наложить санкции на Австрию до момента возвращения Национального совета.
+- @diplomatic_pressure: Надавить на Австрию с целью возвращения совета.
+- @fund_schutzbund: Поддержать подпольную организацию СДРПА.
+- @nothing: Мы ничего не можем поделать.
 
 @eu_sanctions
 view-if: eu = 1
 on-arrival: sdapo_strength += 3; sdapo_strength += 1 if customs_union; eu_austria = 1
 
-The European Union is a largely untested body, and from the beginning contained members that are at best quasi-democratic. Most of its members are more concerned by power politics than democratic values. However, as its founder, Germany holds a special influence in the EU, and we manage to persuade the other members to join in the pressure against Austrofascism.
+Европейский союз ещё не был проверен временем, а большинство участников далеко не самые демократичные страны. Они больше озабочены сохранением власти, чем принципами свободы. Однако, как её основатель, Германия обладает особым влиянием на организацию, и способна убедить другие страны объединить усилия в борьбе с австрофашизмом.
 
-The Dollfuß regime does not give in, but it is weakened and isolated.
+Режим Дольфуса не сдаётся, но он ослаб и изолирован.
 
 @diplomatic_pressure
 view-if: foreign_minister_party = "SPD"
 on-arrival: sdapo_strength += 1; sdapo_strength += 2 if customs_union
 
-We still have much economic influence in Austria, and the threat of sanctions.
+Мы всё ещё обладаем значительным экономическим влиянием на Автрию, и можем пригрозить санкциями.
 
-The Dollfuß regime does not give in, but it is somewhat weakened.
+Режим Дольфуса не сдаётся, но он немного ослаб.
 
 @fund_schutzbund
 on-arrival: resources -= 1; sdapo_strength += 1; sdapo_strength += 1 if customs_union
 subtitle: -1 resource
 choose-if: resources >= 1
 
-It is somewhat of a breach of diplomatic protocol for the SPD to so directly interfere in another country's affairs, supporting the Austrian social democrats.
+Несмотря на спорность решения, мы отправили средства и оружие на помощь нашим братьям в Австрии.
 
-The Dollfuß regime does not give in, but its opponents have an added advantage. That may not be enough when dealing with the total force of the fascist state.
+Режим Дольфуса не сдаётся, но его противники намного сильнее. Однако стоит понимать, что этого может быть недостаточно для победы.
 
 @nothing
 
-Unfortunately, there is nothing we can do for our Austrian comrades.
+К сожалению, мы не можем ничего предоставить нашим австрийским товарищам.
