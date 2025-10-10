@@ -1,5 +1,5 @@
-title: Banking Crisis
-subtitle: The collapse of the German banking system...
+title: Банковский кризис
+subtitle: Коллапс немецкой банковской системы...
 new-page: true
 on-arrival: banking_crisis_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 3; old_middle_nsdap += 4; rural_nsdap += 3; unemployed += 3; crisis_urgency += 1; workers_spd -= 4 if spd_in_government; new_middle_spd -= 5 if spd_in_government; old_middle_spd -= 5 if spd_in_government; rural_spd -= 4 if spd_in_government; economic_growth -= 1;
 tags: event
@@ -7,22 +7,22 @@ view-if: customs_union = 1 and banking_crisis_timer = 0
 max-visits: 1
 face-image: img/danat_bank.jpg
 
-= Banking Crisis
+= Банковский кризис
 
-The Darmstädter und Nationalbank, or Danat Bank, has collapsed! Along with it goes much of the German banking system. The cause seemed to be due to the government's pursuit of a customs union with Austria, which led to de facto international sanctions.
+Дармштадский и Национальный банки, сокращённо данат, пали! За собой в могилу они потянули большую часть банковской системы. Причиной этого считают санкции, последовавшие после нашего с Австрией таможенного союза.
 
-This is a bourgeois dispute, but the costs will be borne by the proletariat. The people are facing ever-increasing hunger and poverty, and perhaps we are partly to blame.
+Это проблема буржуазии, но её последствия будет ощущать на себе в основном пролетариат. Люди становятся жертвой массовой бедности и голода. Некоторые из них начинають винить в этом нас.
 
-- @nothing_to_do: There is nothing we can do.
-- @stabilization: Take action to stabilize the economy!
-- @austerity: Chancellor [+ chancellor +]'s response is, as always, more austerity.
-- @end_toleration: We are tired of austerity. End the toleration arrangement!
+- @nothing_to_do: Мы ничего не можем поделать.
+- @stabilization: Принять хоть что-нибудь, чтобы спасит экономику!
+- @austerity: Канцлер [+ chancellor +] как всегда отвечает экономией.
+- @end_toleration: Мы устали от жёсткой экономии. Разорвать толерацию!
 
 @nothing_to_do
 view-if: spd_in_government = 1
 on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3
 
-There is, essentially, nothing we can do.
+Мы не можем принять никакое существенное решение.
 
 @stabilization
 view-if: spd_in_government = 1
@@ -30,19 +30,19 @@ subtitle: -1 budget
 choose-if: budget >= 1
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 2*(1-dissent); rural_spd += 2*(1-dissent); unemployed -= 2; inflation += 1 if inflation < 0; budget -= 1; workers_nsdap -= 3; economic_growth += 0.9;
 
-In the face of the banking crisis, we have taken emergency action to stabilize the economy by injecting money into the banking system. It might not be enough, but it temporarily staunches the bleeding.
+Мы вручную начали вливать деньги в банковскую систему, дабы оттянуть худшие последствия для экономики. Это немного, но этого достаточно, чтобы на время приостановить проблему.
 
 @austerity
 view-if: spd_in_government = 0
 on-arrival: welfare -= 1; workers_spd -= 3; unemployed_spd -= 3; pro_republic -= 3; economic_growth -= 1;
 
-Chancellor [+ chancellor +] responds to the banking crisis with more cuts to welfare.
+Канцлер [+ chancellor +] ещё больше обрубает бюджет социальным расходам в ответ на кризис.
 
 @end_toleration
 view-if: spd_toleration = 1
 on-arrival: time_to_election = 3; spd_in_government = 0; in_grand_coalition = 0; spd_toleration = 0;
 call: set_next_election_time
 
-We are tired of [+ chancellor +]'s policy of austerity. After [+ chancellor +]'s attempt to use emergency powers to pass another welfare cut, we have worked with the other parties to reverse this policy. In response, the Reichstag has been dissolved, and new elections called.
+Мы устали от политики жёсткой экономии, которую проводит [+ chancellor +]. При его очередной попытке в экстренном порядке сократить социальные траты, мы с другими партиями отказали этому решению. В ответ Рейхстаг был распущен, и были назнаены новые выборы.
 
-New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
+Новые выборы были назначены на [+ next_election_month : month +] [+ next_election_year +].
