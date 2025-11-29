@@ -1,31 +1,31 @@
 title: May Day, 1929
 new-page: true
-subtitle: A Communist demonstration
+subtitle: Коммунистическая демонстрация
 tags: event
 view-if: year = 1929 and month = 5
 max-visits: 1
 face-image: img/redfront.jpg
 
-= May Day, 1929
+= Первое мая, 1929
 
-Tensions run high in Berlin. The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Uprising. No one has forgotten that it was our party members who ordered the uprising's suppression, and the Communists still blame us for the deaths of Rosa Luxemburg and Karl Liebknecht.
+В Берлине растёт напряжение. Коммунисты планируют провести демонстрацию в честь десятилетия восстания спартакистов. Никто не забыл, что именно наша партия отдала приказ о подавлении мятежа, а коммунисты всё ещё обвиняют нас в смерти Розы Люксембург и Карла Либкнехта.
 
-Many non-communists are afraid of the possibility of another violent uprising, and our allies in the Prussian coalition are asking the Prussian Interior Ministry to ban the demonstrations.
+МНогие антикоммунисты боятся вероятности очередного восстания, и потому наши союзники по коалиции в Пруссии просят нас не допустить беспорядков.
 
-- @ban: Ban the demonstrations.
-- @allow_police: Allow the demonstrations to proceed, but maintain a heavy police presence.
-- @allow: Allow the demonstrations to proceed.
-- @join: Join in the demonstrations ourselves.
+- @ban: Запретить демонстрацию.
+- @allow_police: Разрешить демонстрацию, но в присутствии большого количества полиции.
+- @allow: Позволить демонстрации пройти по городу.
+- @join: Самим присоединиться к демонстрации.
 
 @ban
 on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 5; dvp_relation += 5; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1
 face-image: img/blutmai.jpg
 
-We issued the order to ban the demonstrations, and sent police to enforce the ban. There was a confrontation between the police and Communists, and violence erupted. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. The Communists are already calling this incident *Blutmai*, "Bloody May".
+Мы издали приказ о запрете демонстрации и расставили полицию по улицам. Между коммунистами  полицейскими завязалась стычка, впоследствии переросшая в жестокие столкновения. Сообщается о десятках убитых как среди демонстрантов, так и среди мирных прохожих. Коммунисты уже дали этой трагедии имя - *Blutmai*, "Кровавый май".
 
-This may end any attempt at reconciliation with the KPD, but the Center and People's parties approve of our action.
+Это ставит крест на наших с КПГ отношениях, но Центр и прочие правые партии довольны.
 
-- @corrupt_police: It is the fault of corrupt and reactionary elements within the police. Purge those responsible.
+- @corrupt_police: Это была вина коррумпированных и реакционных элементов полиции. Увольте ответственных за случившееся.
 - @communist_fault: It is the fault of the Communists for refusing to follow the rule of law.
 - @no_fault: It is an unfortunate incident that should not have happened, but is no one's fault at all.
 
