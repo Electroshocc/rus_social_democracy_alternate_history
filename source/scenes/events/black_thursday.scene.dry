@@ -1,5 +1,5 @@
-title: Black Thursday
-subtitle: The great stock market crash...
+title: Чёрный четверг
+subtitle: Крах на рынке ценных бумаг...
 new-page: true
 on-arrival: black_thursday_seen = 1; workers_kpd += 5; workers_nsdap += 3; new_middle_nsdap += 4; old_middle_nsdap += 5; rural_nsdap += 5; unemployed_nsdap += 5; unemployed += 2; budget -= 1 if budget > 0; dues -= 1 if dues > 2; inflation -= 1; economic_growth -= 1;
 tags: event
@@ -7,17 +7,17 @@ view-if: year = 1929 and month >= 10
 max-visits: 1
 face-image: img/bankrun.jpg
 
-= Black Thursday
+= Чёрный четверг
 
-The stock market in America has had its biggest crash in history. It is too early to tell what the international effects will be, but it cannot be good. Our economy is already feeling the effects - unemployment will rise even more, and wages will fall. As always, it is the capitalists' crisis, and the workers' burden.
+Рынок акций в Америке пережил своё крупнейшее падение за всю историю. Пока что рано оценивать последствия на мировую экономику, но это событие явно к худшему. Мы уже можем ощутить падение рынка на себе - безработица растёт ещё быстрее, а зарплаты снижаются. Как всегда, кризис капиталистов ложится ярмом на рабочих.
 
 
-- @cap: It is the nature of capitalism...
-- @do_something: We must do something to stop the suffering...
+- @cap: Таков капитализм...
+- @do_something: Мы должны действовать, чтобы остановить страдания рабочих!
 
 @cap
 
-Perhaps this is simply one of the periodic crises of capitalism. Perhaps this moment will simply pass.
+Это всего лишь очередной кризис капитализма, каких было и будет ещё много. Он скорее всего пройдёт быстро.
 
 @do_something
 on-arrival: crisis_urgency += 1
