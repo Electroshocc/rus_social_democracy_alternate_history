@@ -26,42 +26,42 @@ face-image: img/blutmai.jpg
 Это ставит крест на наших с КПГ отношениях, но Центр и прочие правые партии довольны.
 
 - @corrupt_police: Это была вина коррумпированных и реакционных элементов полиции. Увольте ответственных за случившееся.
-- @communist_fault: It is the fault of the Communists for refusing to follow the rule of law.
-- @no_fault: It is an unfortunate incident that should not have happened, but is no one's fault at all.
+- @communist_fault: Это вина коммунистов, отказавшихся соблюдать закон.
+- @no_fault: Это ужасный инцидент, который не должен был произойти, но никого винить в этом не стоит.
 
 @corrupt_police
 on-arrival: kpd_relation += 10; z_relation -= 2; dvp_relation -= 2; prussian_police_loyalty += 0.05
 
-We arrested the police responsible for the killings, and put them on trial. [? if judicial_reform = 0 : Unfortunately, the reactionary judiciary let them go free with barely any punishment at all. ?]
+Мы арестовали и осудили коррумпированных полицейских, участвовавших в подавлении. [? if judicial_reform = 0 : К сожалению, реакционная судебная система еле их наказала. ?]
 
-This assuages some of the Communists' outrage, but certainly not all.
+Это немного поумерило пыл коммунистов, но не полностью.
 
 @communist_fault
 on-arrival: kpd_relation -= 10; z_relation += 5; dvp_relation += 5; rfb_strength -= 80; rfb_banned = 1
 
-If the KPD continues to act illegally, they must suffer the consequences. Thus, we have banned the RFKB, their paramilitary group. The bourgeois and right-leaning parties approve.
+Если КПГ продолжит свою нелегальную деятельность, это возымеет последствия. Мы запретили РФКБ, их полувоенную группировку. Буржуазные и правые партии одобрили наши действия.
 
 @no_fault
 
-This position gains us no allies, and does not alienate anyone any further.
+Эта позиция никого не разочаровала, но и не обрадовала.
 
 
 @allow_police
 on-arrival: kpd_relation += 5; workers_kpd += 5; unemployed_kpd += 5
 
-The demonstration proceeds peacefully under the watchful eyes of the police. Onlookers admire the strength of the Communist workers, and perhaps some of our supporters have been peeled off.
+Демонстрация мирно прошла под надзором полиции. Наблюдатели были воодушевлены силой демонстрантов, и некоторая часть наших сторонников ушкла к коммунистам.
 
 
 @allow
 on-arrival: workers_kpd += 5; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1
 
-The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and perhaps some of our members have been peeled off. The KPD will never admit it, but they are developing a less hostile view towards us (even if they do not *like* us yet). Our centrist allies denounce the demonstration, but their cries are ineffectual.
+Практически без надзора полиции, демонстрация мирно прошла по городу. Наблюдатели были воодушевлены силой демонстрантов, и некоторая часть наших сторонников ушкла к коммунистам. КПГ этого не признает, но они становятся всё менее негативно настроены по отношению к нам (даже если мы им пока что не *нравимся*). Центристские и буржуазные партии критикуют наши действия, но нас это не волнует.
 
 
 @join
 choose-if: kpd_relation >= 45
-unavailable-subtitle: The Communists do not trust us enough.
+unavailable-subtitle: Коммунисты нам не доверяют.
 on-arrival: kpd_relation += 15; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50
 achievement: die_rote_fahne
 
-It is difficult to persuade the Communists to let us march with them, given the histories of their party and ours. However, they eventually relent. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class. [? if in_grand_coalition : Our coalition partners in the government are outraged at our display with the communists, and are threatening to break up the government. ?] The far-right paramilitaries increase their recruitment to counter us.
+Зная историю нашх отношений, было непросто убедить коммунистов позволить нам присоединиться к ним. Тем не менее, они согласились. Вид пролетарского единства вдохновил рабочих и привёл в ужас капиталистов. [? if in_grand_coalition : Наши партнёры по коалиции пришли в ярость и угрожают уйти в отставку. ?] Ультраправые полувоенные организации увеличили набор, чтобы противостоять нам.
