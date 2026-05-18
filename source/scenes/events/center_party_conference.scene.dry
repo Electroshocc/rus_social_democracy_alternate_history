@@ -1,40 +1,40 @@
-title: Center Party Conference
-subtitle: The Center Party chooses their new leader...
+title: Конферения партии Центра
+subtitle: Партия Центра выбирает нового лидера...
 view-if: year = 1928 and month = 12 and z_party_leader = "Marx"
 max-visits: 1
 tags: event
 new-page: true
 
-= Center Party Conference
+= Партийная конференция Центра
 
 # reference: Evans, Ellen L. “Adam Stegerwald and the Role of the Christian Trade Unions in the Weimar Republic.” The Catholic Historical Review 59, no. 4 (1974): 602–26.
 
-Wilhelm Marx, former Center Party chancellor and presidential candidate, has chosen to resign from leadership of the Center Party. Now, the party holds a conference to replace him.
+Вильгельм Маркс, бывший канцлер и кандидат в перзиденты от партии Центра, приня решение уйти с поста лидера партии. После этого было принято решение провести конференцию с целью найти нового лидера.
 
-The consensus candidate on the right is Ludwig Kaas, a Catholic priest who represents the party's traditionalists. On the other hand, there is Joseph Joos, a leader of the Catholic trade unions, who has been more supportive of cooperation with the SPD than most of the Center Party.
+Правое крыло партии предложило кандидатуру Людвига Кааса, католического священника и традиционалиста. С другой стороны представлен Йозеф Йоос, председатель объединения католических профсоюзов. Он выступал в поддержку кооперации с СДПГ и в целом наиболее дружелюбен к нашей партии.
 
-- @kaas: The Center Party elects Ludwig Kaas as the party chair.
-- @joos: Influence the Center Party to select Joseph Joos as the party chair.
-- @joos_campaign: We must hold a campaign in support of Joseph Joos as party chair.
+- @kaas: Партия Центра избрала Людвига Кааса председателем.
+- @joos: Убедить Центр избрать Йооса лидером.
+- @joos_campaign: Мы должны провести кампанию в поддержку Йооса.
 
 @kaas
 on-arrival: z_party_leader = "Kaas"; z_relation -= 5
 
-Ludwig Kaas has been selected as the chairman of the Center Party. He seems to represent a rightward turn from Marx, and will preside over a Center Party less inclined to compromise with the left.
+Людвиг Каас был избран председателем партии Центра. Это означает правый поворот в политике Центра, скорее всего, партия будет избегать сотрудничества с нами.
 
 @joos
-unavailable-subtitle: Our relations are not good enough.
-subtitle: Joos is likely to be friendlier to us than Kaas.
+unavailable-subtitle: Наши отношения недостаточно теплы.
+subtitle: Йоос будет дружелюбнее к нам, чем Каас.
 choose-if: z_relation >= 70
 on-arrival: z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
-With our grassroots connections, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+Используя наши связи с руководством партии, мы смогли убедить делегатов конференции избрать председателем Йозефа Йооса. Он давно был другом СДПГ и будет рад сотрудничать с нами в дальнейшем. Он также будет поддеживать рабочий класс от лица партии.
 
 @joos_campaign
 choose-if: z_relation >= 62 and resources >= 1 
 view-if: z_relation < 70
-unavailable-subtitle: [? if z_relation <= 62 : Our relations are not good enough. ?] [? if resources < 1 : We do not have enough resources. ?]
+unavailable-subtitle: [? if z_relation <= 62 : Наши отношения недостаточно теплы. ?] [? if resources < 1 : У нас недостаточно ресурсов. ?]
 subtitle: -1 resource. Joos is likely to be friendlier to us than Kaas.
 on-arrival: resources -= 1; z_party_leader = "Joos"; catholics_spd += 5; workers_z += 3
 
-With our grassroots connections as well as a professional campaign, we have been able to influence the Center delegates to support Joseph Joos as the new Center chairman. He has long been a friend of the SPD, and will be more inclined to collaborate with us compared to Kaas. He also increases the appeal of the Center Party to the working class.
+Используя наши связи в руководстве партии и запустив кампанию в поддержку Йозефа Йооса, мы смогли убедить делегатов на конференции избрать его председателем партии. Он давно был другом СДПГ и будет рад сотрудничать с нами в дальнейшем. Он также будет поддеживать рабочий класс от лица партии.
