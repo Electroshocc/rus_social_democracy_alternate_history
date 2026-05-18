@@ -366,7 +366,7 @@ go-to: eg_menu if started == 1; root.start_menu_2 if started == 0
 
 [? if game_achievement_versohnler: **Versöhnler** - Повлияйте на КПГ так, чтобы у власти встали заговорщики. ?]
 
-[? if game_achievement_deport_hitler : **Der österreichische Gefreite** - Депортируйте Австрийского художника в Австрию ?]
+[? if game_achievement_deport_hitler : **Der österreichische Gefreite** - Депортируйте Австрийского художника обратно на родину. ?]
 
 [? if game_achievement_wirtschaftspolitik: **Wirtschaftspolitik** - Начните исполнение экономического плана. ?]
 
